@@ -1,6 +1,6 @@
 export default function FeatureSection() {
   return (
-    <section className="w-full min-h-screen bg-[url('./assets/textured_tan_bg.jpg')] bg-cover bg-center bg-no-repeat mt-12 py-12 px-6 flex flex-col justify-center items-center">
+    <section className="w-full min-h-screen bg-[#f8fbf9] bg-cover bg-center bg-no-repeat mt-12 py-12 px-6 flex flex-col justify-center items-center">
       <div className="max-w-6xl w-full mx-auto text-[var(--green)] text-center">
         
         {/* Heading */}

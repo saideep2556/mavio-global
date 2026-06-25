@@ -16,14 +16,14 @@ const ManifestStrip = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
           {company.manifestStats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.08} y={14}>
-              <div className="py-8 md:py-10 px-1 md:px-6 text-center md:text-left bg-[var(--grey)]">
+              <div className="py-8 md:py-10 px-1 md:px-6 text-center md:text-left bg-[#f8fbf9]">
                 <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-[var(--green)]">
-                  {String(i + 1).padStart(2, "0")} / Manifest
+                  {String(i + 1).padStart(2, "0")} / Impact
                 </span>
                 <p className="font-mono text-3xl md:text-4xl mt-2 text-[var(--ink)]">
                   <CountUp value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="text-xs md:text-sm text-[var(--charcoal)]/70 mt-1">{stat.label}</p>
+                <p className="text-xs md:text-sm text-[var(--ink)]/70 mt-1">{stat.label}</p>
               </div>
             </Reveal>
           ))}

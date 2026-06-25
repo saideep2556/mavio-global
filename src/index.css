@@ -1,6 +1,15 @@
 @import "tailwindcss";
-@import url('https://googleapis.com');
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-lora: "Lora", serif;
+  --font-source: "Source Sans 3", sans-serif;
+}
+
 
 :root {
   /* Color tokens — drawn from the trade itself: sacking cream, paprika, bay leaf, turmeric, coffee-bean dark */
@@ -22,7 +31,7 @@
   --font-display: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
-  --font-poppins: "Poppins", sans-serif;
+
 
   --container: 1320px;
 }

@@ -2,9 +2,9 @@ import Reveal from "./Reveal";
 import { Link } from "react-router-dom";
 import paddy from "../assets/shipment.jpg"; // Make sure this points to your new ship image
 
-const HomeForm = () => {
+const HomeForm = ({spaceReq=false}) => {
   return (
-    <section className="py-24">
+    <section className={!spaceReq ? "py-8" : "py-24"}>
       <div className="container-px">
         <Reveal>
           {/* Added flex, flex-col, and justify-between to push items to the top and bottom.

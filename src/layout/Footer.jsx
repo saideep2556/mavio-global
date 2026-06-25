@@ -3,14 +3,12 @@ import { certifications } from "../data/content";
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--cream)] text-[var(--paprika)] mt-32">
+    <footer className="bg-[#f8fbf9] text-[var(--paprika)] mt-32">
       <div className="container-px py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
           <p className="font-display text-2xl mb-3">Mavio Global</p>
           <p className="text-sm text-black max-w-sm leading-relaxed">
-            A fourth-decade spice trading house exporting whole spices and
-            oleoresins from Kochi and Tuticorin to processors and retailers
-            in 42 countries.
+            An international trading house specializing in the import and export of agricultural commodities and value-added derivatives.
           </p>
         </div>
 
@@ -35,8 +33,8 @@ const Footer = () => {
       </div>
 
       <div className="container-px py-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-black font-mono">
-        <span>© {new Date().getFullYear()} Mavio Global Pvt. Ltd. — Reg. Spice Board of India</span>
-        <span>Kochi · Tuticorin</span>
+        <span>© 2025 Mavio Global Pvt. Ltd. — Reg. Spice Board of India</span>
+        <span>Hyderabad</span>
       </div>
     </footer>
   );

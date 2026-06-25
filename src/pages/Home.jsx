@@ -78,21 +78,14 @@ const Home = () => {
 
   return (
     <>
-      <SplitHero panels={heroPanels} />
+      <SplitHero panels={heroPanels}  />
       <About sectionText={settings?.sectionText} />
       {/* <ManifestStrip /> */}
       <OurValue/>
-      <CategoryGrid categories={categories} />
+      <CategoryGrid categories={categories} isProductPage = {false}/>
       <FeatureSection />
       
       <CertMarquee />
-
-
-      {/* <IntroSection
-      introBig={settings?.introBig}
-      introSmall={settings?.introSmall}
-      introCta={settings?.introCta}
-    /> */}
 
     
 
@@ -179,7 +172,7 @@ const Home = () => {
         </div>
       </section> */}
 
-      <HomeForm />
+      <HomeForm spaceReq={true}/>
 
       <ContactCtaStrip
         contactCta={settings?.contactCta}

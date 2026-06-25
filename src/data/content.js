@@ -8,10 +8,10 @@ export const company = {
   founded: 1987,
   hq: "Kochi, Kerala",
   manifestStats: [
-    { value: "38", label: "Years Trading", suffix: "" },
-    { value: "42", label: "Countries Served", suffix: "+" },
-    { value: "2", label: "Export Ports", suffix: "" },
-    { value: "11,000", label: "Tonnes / Year", suffix: "+" },
+    { value: "50", label: "Direct Farm Partnership", suffix: "+" },
+    { value: "100", label: "Traceable Supply Chain", suffix: "%" },
+    { value: "6+", label: "Global Certifications", suffix: "+" },
+    { value: "1,000+", label: "Tonnes / Year", suffix: "+" },
   ],
 };
 
@@ -154,12 +154,15 @@ export const news = [
 ];
 
 export const certifications = [
-  "ISO 22000:2018",
-  "BRCGS Food Safety, Issue 9",
+  "APEDA Registered",
+  "MPEDA Registered",
   "Spice Board of India",
   "FSSAI Licensed",
-  "APEDA Registered",
-  "EU Organic (select lots)",
+  "ISO 9001:2015",
+  "FSSC 22000",
+  "BRC Global Standard for Food Safety",
+  "IEC (Importer Exporter Code) — DGFT",
+  "GST & RCMC (Registration,Membership)"
 ];
 
 export const ports = [

@@ -7,12 +7,8 @@ import Reveal from "../components/Reveal";
 import { getCategories } from "../lib/queries";
 import { isSanityConfigured } from "../lib/sanity";
 import productsBanner from "../assets/products_banner.jpg";
-import farm from "../assets/farm-1.jpg"
-import sort from "../assets/sort-2.jpg"
-import lab from "../assets/lab-3.jpg"
-import packing from "../assets/packing-4.jpg"
-import storage from "../assets/storage-5.jpg"
-import logistics from "../assets/logistics-6.jpg"
+import CategoryGrid from "../components/CategoryGrid";
+import HomeForm from "../components/HomeForm";
 
 // Fallback static categories from the catalogue
 const fallbackCategories = [
@@ -257,42 +253,29 @@ const Products = () => {
         {/* Right panel — active category content */}
         <div className="flex-1 py-8 md:py-12 md:pl-12">
           {isLandingPage ? (
-  <Reveal>
-    <div className="max-w-5xl">
-      <h2 className="font-display text-5xl mb-6 text-[var(--ink)]">
-        Products We Export
-      </h2>
+            
+            <Reveal>
+              <div className="max-w-5xl">
+                <h2 className="font-display text-5xl mb-6 text-[var(--ink)]">
+                  Products We Export
+                </h2>
 
-      <p className="text-lg leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
-        Mavio Global supplies a wide portfolio of agricultural commodities,
-        seafood, and specialty chemicals. Leveraging India's rich agricultural
-        diversity and world-class processing infrastructure, our integrated supply
-        chain ensures every consignment meets destination regulatory standards.
-      </p>
+                <p className="text-lg leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
+                  Mavio Global supplies a wide portfolio of agricultural commodities,
+                  seafood, and specialty chemicals. Leveraging India's rich agricultural
+                  diversity and world-class processing infrastructure, our integrated supply
+                  chain ensures every consignment meets destination regulatory standards.
+                </p>
 
-      <hr className="border-[var(--line)] my-12" />
+                <hr className="border-[var(--line)] my-12" />
 
-      
+                <CategoryGrid categories={categories}  isProductPage = {true}  />
 
-
-      {/* Bottom CTA */}
-      <div className="bg-[var(--ink)] rounded-3xl p-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
-        <div>
-          <h3 className="font-display text-3xl text-[var(--cream)] mb-3">Ready to Source?</h3>
-          <p className="text-[var(--cream)]/80 max-w-lg leading-relaxed">
-            Our dedicated export team is ready to provide tailored specifications, minimum order quantities, and pricing within 24 business hours.
-          </p>
-        </div>
-        <Link
-          to="/contact"
-          className="inline-block shrink-0 px-8 py-4 bg-[var(--green)] text-[var(--cream)] font-medium tracking-wide rounded-full hover:bg-[var(--green-dark)] transition-colors"
-        >
-          Request Product Catalogue
-        </Link>
-      </div>
-    </div>
-  </Reveal>
-) : (
+                {/* Bottom CTA */}
+                
+              </div>
+            </Reveal>
+          ) : (
             <AnimatePresence mode="wait">
               <motion.div
                 key={slug}
@@ -308,72 +291,64 @@ const Products = () => {
                 </Reveal>
 
                 {activeCategory?.products?.length > 0 && (
-  <Reveal delay={0.08}>
-    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
-      {activeCategory?.products?.length > 0 && (
-  <Reveal delay={0.08}>
-    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
-      {activeCategory.products.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            className={`flex flex-col gap-6 py-10 ${
-              i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
-          >
-            {/* Image */}
-            <div className="shrink-0 md:w-56 md:h-36 w-full h-52 rounded-xl overflow-hidden bg-[var(--cream-dim)]">
-              {p.imageUrl ? (
-                <img
-                  src={p.imageUrl}
-                  alt={p.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-[var(--cream-dim)] flex items-center justify-center">
-                  <span className="font-mono text-xs text-[var(--charcoal)]/30 uppercase tracking-widest">
-                    No image
-                  </span>
-                </div>
-              )}
-            </div>
+                  <Reveal delay={0.08}>
+                    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
+                      {activeCategory?.products?.length > 0 && (
+                  <Reveal delay={0.08}>
+                    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
+                      {activeCategory.products.map((p, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-40px" }}
+                            transition={{ duration: 0.5, delay: i * 0.05 }}
+                            className={`flex flex-col gap-6 py-10 ${
+                              i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                            }`}
+                          >
+                            {/* Image */}
+                            <div className="shrink-0 md:w-56 md:h-36 w-full h-52 rounded-xl overflow-hidden bg-[var(--cream-dim)]">
+                              {p.imageUrl ? (
+                                <img
+                                  src={p.imageUrl}
+                                  alt={p.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              ) : (
+                                <div className="w-full h-full bg-[var(--cream-dim)] flex items-center justify-center">
+                                  <span className="font-mono text-xs text-[var(--charcoal)]/30 uppercase tracking-widest">
+                                    No image
+                                  </span>
+                                </div>
+                              )}
+                            </div>
 
-            {/* Content */}
-            <div className="flex flex-col flex-1">
-              <h4 className="font-poppins  text-2xl md:text-3xl text-[var(--green)] tracking-tighter mb-3">
-                {p.name}
-              </h4>
-              {p.description && (
-                <p className="text-[var(--black)]/70 leading-relaxed">
-                  {p.description}
-                </p>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </Reveal>
-  )}
-    </div>
-  </Reveal>
-)}
-
-                <Reveal delay={0.12}>
-                  <Link
-                    to="/contact"
-                    className="inline-block px-7 py-3.5 bg-[var(--green)] text-[var(--cream)] rounded-full"
-                  >
-                    Request a quote for {activeCategory?.name}
-                  </Link>
-                </Reveal>
+                            {/* Content */}
+                            <div className="flex flex-col flex-1">
+                              <h4 className="font-poppins  text-2xl md:text-3xl text-[var(--green)] tracking-tighter mb-3">
+                                {p.name}
+                              </h4>
+                              {p.description && (
+                                <p className="text-[var(--black)]/70 leading-relaxed">
+                                  {p.description}
+                                </p>
+                              )}
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </Reveal>
+                  )}
+                    </div>
+                  </Reveal>
+                )}
               </motion.div>
             </AnimatePresence>
           )}
         </div>
       </div>
+      <HomeForm spaceReq={false}/>
     </div>
   );
 };

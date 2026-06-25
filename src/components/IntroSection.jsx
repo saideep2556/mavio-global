@@ -5,21 +5,21 @@ const IntroSection = ({ introBig, introSmall, introCta }) => {
   if (!introBig && !introSmall) return null;
 
   return (
-    <section className="py-20 md:py-28 bg-white ">
-      <div className="container-px grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+    <section className="py-20 md:pt-28 md:py-14">
+      <div className="container-px py-8 grid md:grid-cols-2 gap-12 md:gap-8 items-start bg-[#f8fbf9]">
 
         {/* Left — big statement text */}
-        <Reveal>
-          <p className="font-display text-2xl md:text-3xl lg:text-3xl leading-tight text-[var(--ink)]">
+        
+          <div className="font-lora  text-2xl md:text-3xl lg:text-6xl text-center  leading-tight text-[var(--green)] py-14">
             {introBig}
-          </p>
-        </Reveal>
+          </div>
+        
 
         {/* Right — smaller body + CTA */}
         <Reveal delay={0.12}>
-          <div className="flex flex-col gap-8 pt-2">
+          <div className="font-source flex flex-col gap-8 py-10 text-center">
             {introSmall && (
-              <p className="text-[var(--charcoal)]/80 leading-relaxed">
+              <p className="text-[var(--green)] leading-relaxed">
                 {introSmall}
               </p>
             )}

@@ -4,19 +4,22 @@ import SafeImage from "./SafeImage";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const CategoryGrid = ({ categories = [] }) => {
+const CategoryGrid = ({ categories = [] , isProductPage = false }) => {
   if (!categories.length) return null;
 
   return (
-    <section className="py-20 md:py-28">
-      <div className="container-px">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-          <SectionHeading
-            eyebrow="What we trade"
-            title="Our Product Categories"
-            body="From farm clusters across India to processors and retailers in 42 countries."
-          />
-          <Reveal delay={0.1}>
+    <section className={isProductPage ? "pt-0 pb-20" : "py-20 md:py-28"}>
+      <div className={isProductPage ? "" : "container-px"}>
+          {!isProductPage && (
+            <>
+             <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+              <SectionHeading
+              eyebrow="What we trade"
+              title="Our Product Categories"
+              body="From farm clusters across India to processors and retailers in 42 countries."
+            />
+            
+            <Reveal delay={0.1}>
             <Link
               to="/products"
               className="font-mono text-xs uppercase tracking-widest text-[var(--paprika)] hover:underline whitespace-nowrap"
@@ -24,10 +27,13 @@ const CategoryGrid = ({ categories = [] }) => {
               View all products →
             </Link>
           </Reveal>
-        </div>
+          </div>
+            </>
+            
+          )}
+        
 
-        {/* Scrollable row on mobile, grid on desktop — Kalsec style */}
-        <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 snap-x snap-mandatory md:snap-none">
+        <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 snap-x snap-mandatory md:snap-none">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.slug}

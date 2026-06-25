@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 const navItems = [
   { label: "About", to: "/about" },
   { label: "Products", to: "/products" },
-  { label: "Sustainability", to: "/sustainability" },
+  { label: "Accreditations", to: "/accreditations" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -21,6 +21,9 @@ const Header = () => {
   return (
     pathname === "/" ||
     pathname === "/products" ||
+    pathname === "/about" ||
+    pathname === "/contact" ||
+    pathname === "/accreditations" ||
     pathname.startsWith("/products/")
   );
 };
@@ -57,7 +60,10 @@ const showSolid = scrolled || !hasTransparentHeader;
         {/* Logo — white before scroll, ink after */}
         <Link
           to="/"
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="font-display text-xl md:text-2xl tracking-tight transition-colors duration-300"
         >
           <span className={showSolid ? "text-[var(--ink)]" : "text-[var(--cream)]"}>
@@ -87,17 +93,6 @@ const showSolid = scrolled || !hasTransparentHeader;
               {item.label}
             </NavLink>
           ))}
-
-          <Link
-            to="/contact"
-            className={`font-mono text-xs uppercase tracking-widest px-4 py-2 rounded-full transition-all duration-300 ${
-              showSolid
-                ? "bg-[var(--ink)] text-[var(--cream)] hover:bg-[var(--paprika)]"
-                : "border border-[var(--cream)]/60 text-[var(--cream)] hover:bg-[var(--cream)]/10"
-            }`}
-          >
-            Request Quote
-          </Link>
         </nav>
 
         {/* Mobile hamburger — white before scroll */}

@@ -4,121 +4,132 @@ import ManifestStrip from "../components/ManifestStrip";
 import Gallery from "../components/Gallery";
 import SafeImage from "../components/SafeImage";
 import { leadership, milestones, company, images } from "../data/content";
+import { Link } from "react-router-dom";
+import bannerImage from "../assets/about-us.jpg";
+import IntroSection from "../components/IntroSection";
+import { useState, useEffect } from "react";
+import { getCompanySettings } from "../lib/queries";
+import { isSanityConfigured } from "../lib/sanity";
+import farm from "../assets/farm-1.jpg"
+import HomeForm from "../components/HomeForm";
+
 
 const About = () => {
+
+    const [settings, setSettings] = useState(null);
+
+    useEffect(() => {
+      if (!isSanityConfigured) return;
+      getCompanySettings().then((data) => {
+        if (data) setSettings(data);
+      });
+    }, []);
+
+    const scrollToContent = () => {
+    const contentEl = document.getElementById("category-content");
+    if (contentEl) {
+      const headerOffset = 80; // Exact height of the h-20 header (80px)
+      const elementPosition = contentEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
-      <section className="pt-40 pb-20 md:pt-52 md:pb-28">
-        <div className="container-px">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--paprika)] mb-6">
-            About Us
-          </p>
-          <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.08] tracking-tight max-w-3xl">
-            We've been on the trade floor longer than most of our customers have existed.
+      <section
+        className="relative h-screen min-h-[600px] bg-cover bg-center bg-no-repeat flex items-end"
+        style={{
+          backgroundImage: `url(${bannerImage})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/45" />
+
+        <div className="relative container-px pb-14 w-full">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--turmeric)] mb-3">Our Purpose</p>
+
+          <h1 className="font-source text-5xl md:text-7xl text-[var(--cream)] max-w-3xl leading-tight">
+            Unlocking the potential of people, nature & science to nourish the world
           </h1>
-          <p className="text-[var(--charcoal)]/80 text-lg max-w-2xl mt-7 leading-relaxed">
-            Mavio Global started in {company.founded} as a single-container
-            pepper trading operation out of {company.hq}. Today we grade, pack
-            and ship six core spice lines from two facilities, still run by
-            the same family, now in its third generation on the floor.
-          </p>
         </div>
+
+        {/* Animated Arrow Icon */}
+        <button
+          onClick={scrollToContent}
+          className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce cursor-pointer group p-4 focus:outline-none"
+          aria-label="Scroll to content"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-10 h-10 text-[var(--cream)]/70 group-hover:text-[var(--turmeric)] transition-colors"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </button>
       </section>
 
       {/* Facility photo */}
       <Reveal>
-        <div className="container-px">
-          <div className="rounded-3xl overflow-hidden h-[340px] md:h-[460px]">
-            <SafeImage
-              src={images.aboutFacility}
-              alt="Mavio Global grading and packing facility"
-              className="w-full h-full object-cover"
-              fallbackColor="var(--charcoal)"
-            />
-          </div>
+        <div id="category-content" className="container-px">
+            <IntroSection
+              introBig={settings?.introBig}
+              introSmall={settings?.introSmall}
+              introCta={settings?.introCta}
+        />
         </div>
+        
       </Reveal>
 
-      <ManifestStrip />
-
-      {/* Heritage timeline */}
-      <section className="py-24 md:py-32">
-        <div className="container-px">
-          <SectionHeading eyebrow="Heritage" title="How we got here" />
-          <div className="mt-14 flex flex-col gap-10 max-w-3xl">
-            {milestones.map((m, i) => (
-              <Reveal key={m.year} delay={i * 0.06}>
-                <div className="flex gap-6 md:gap-10 items-start border-t border-[var(--line)] pt-7">
-                  <span className="font-mono text-sm text-[var(--paprika)] w-16 shrink-0 pt-0.5">
-                    {m.year}
-                  </span>
-                  <div>
-                    <p className="font-display text-xl mb-1.5">{m.title}</p>
-                    <p className="text-sm text-[var(--charcoal)]/70 leading-relaxed">{m.body}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-24 md:py-32 bg-[var(--cream-dim)]">
-        <div className="container-px">
-          <SectionHeading
-            eyebrow="On the floor"
-            title="From farm gate to shipping container"
-            body="A look inside grading, drying and packing at our Kochi and Tuticorin facilities."
-          />
-          <div className="mt-14">
-            <Gallery images={images.gallery} />
-          </div>
-        </div>
-      </section>
-
-      {/* World map */}
-      <section className="py-24 md:py-32">
-        <div className="container-px">
-          <SectionHeading
-            eyebrow="Global presence"
-            title="Two ports. Forty-two destinations."
-            body="Hover or tap a market on the map to see what we trade there and at what volume."
-          />
-          <div className="mt-14">
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-24 md:py-32 bg-[var(--ink)] text-[var(--cream)]">
-        <div className="container-px">
-          <SectionHeading
-            eyebrow="Leadership"
-            title="The people signing off on every consignment"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-14">
-            {leadership.map((person, i) => (
-              <Reveal key={person.name} delay={i * 0.08}>
-                <div className="bg-[var(--cream)]/5 border border-[var(--cream)]/15 rounded-2xl p-7 h-full">
-                  <div
-                    className="w-14 h-14 rounded-full mb-5 flex items-center justify-center font-display text-lg text-[var(--ink)]"
-                    style={{ background: "var(--turmeric)" }}
-                  >
-                    {person.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                  </div>
-                  <p className="font-display text-lg mb-1">{person.name}</p>
-                  <p className="font-mono text-xs uppercase tracking-wide text-[var(--turmeric)] mb-3">
-                    {person.role}
-                  </p>
-                  <p className="text-sm text-[var(--cream)]/70 leading-relaxed">{person.note}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+      <div className="container-px py-14">
+  {/* Added px-8 md:px-16 lg:px-24, gap, and rounded-3xl to frame the layout perfectly */}
+  <div className="bg-[#f8fbf9] overflow-hidden flex flex-col md:flex-row-reverse py-16 px-8 md:px-16 lg:px-24 items-center gap-12 lg:gap-20">
+    
+    <SafeImage 
+      src={farm} 
+      alt="Farm Sourcing" 
+      loading="lazy"
+      /* Added shrink-0 and adjusted widths so the portrait image holds its shape */
+      className="w-full md:w-5/12 lg:w-2/5 object-cover bg-[var(--cream-dim)] h-[30rem] md:h-[38rem]  shadow-xl shrink-0"
+    />
+    
+    <div className="w-full md:w-7/12 lg:w-3/5 flex flex-col justify-center">
+      <h4 className="font-display text-4xl mb-6 text-[var(--green)]">
+        Delivering Agricultural Excellence on a Global Scale
+      </h4>
+      <div className="text-[var(--charcoal)] font-source text-base leading-relaxed space-y-6">
+        <p>
+          With our headquarters in Hyderabad, Telangana, and a strategic procurement network spanning India's most premium agricultural hubs, Mavio Global is a trusted international leader in the export of agricultural commodities, seafood, and specialty chemicals. Because we source directly from curated farming communities and state-of-the-art processing facilities, we help you secure the highest quality products that meet the rigorous regulatory expectations of today’s global markets.
+        </p>
+        <p>
+          We are a premier export house that takes immense pride in providing our international buyers with industry-renowned quality, deep logistical expertise, and superior service. Our commitment to excellence extends far beyond our vast portfolio of products. Mavio Global’s fully integrated supply chain—from ethical farm procurement and precision lab testing to doorstep logistics—ensures unparalleled quality control, traceability, and year-round reliability.
+        </p>
+        <p>
+          Backed by globally recognized accreditations including ISO 9001:2015, FSSC 22000, and BRC, we meet the highest international standards for food safety and operational integrity. This represents our unwavering commitment to Good Agricultural Practices (GAP) and ethical sourcing decisions that empower local farmers, protect the environment, and serve our international customers.
+        </p>
+        <p className="font-semibold text-[var(--ink)] pt-2">
+          At Mavio Global, we are more than just commodity exporters — we partner with you to solve your toughest procurement challenges and deliver quality you can trust.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+      
+      <ManifestStrip />  
+      <HomeForm spaceReq={false}/>
+      </>
   );
 };
 
