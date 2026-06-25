@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color tokens — drawn from the trade itself: sacking cream, paprika, bay leaf, turmeric, coffee-bean dark */
+  --cream: #fff;
+  --cream-dim: #EEE5D3;
+  --ink: #1C1410;
+  --charcoal: #3A332C;
+  --paprika: #B8541F;
+  --paprika-dark: #93421A;
+  --bay: #6B7B4F;
+  --bay-dark: #54603F;
+  --turmeric: #D4A24C;
+  --line: #DDD2BB;
+  --green: rgb(24, 76, 38);
+  --lightgreen: rgb(138 247 167);
+  --grey: #FAFAFA;
+  --transparent : rgba(0,0,0,0)
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-poppins: "Poppins", sans-serif;
+
+  --container: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* visible keyboard focus, kept once, applies everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--paprika);
+  outline-offset: 3px;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.container-px {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-px {
+    padding-inline: 3rem;
+  }
+}
