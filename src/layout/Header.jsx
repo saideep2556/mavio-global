@@ -80,6 +80,10 @@ const showSolid = scrolled || !hasTransparentHeader;
             <NavLink
               key={item.to}
               to={item.to}
+              onClick={() => {
+                setOpen(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className={({ isActive }) =>
                 `text-sm font-medium tracking-wide transition-colors duration-300 ${
                   isActive
