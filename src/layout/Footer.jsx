@@ -17,7 +17,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-2.5 text-sm text-black">
             <li><Link to="/about" className="hover:text-[var(--turmeric)]">About</Link></li>
             <li><Link to="/products" className="hover:text-[var(--turmeric)]">Products</Link></li>
-            <li><Link to="/sustainability" className="hover:text-[var(--turmeric)]">Sustainability</Link></li>
+            <li><Link to="/accreditations" className="hover:text-[var(--turmeric)]">Accreditations</Link></li>
             <li><Link to="/contact" className="hover:text-[var(--turmeric)]">Contact</Link></li>
           </ul>
         </div>
