@@ -170,7 +170,7 @@ const Products = () => {
       >
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative container-px pb-14 w-full">
+        <div className="relative container-px pb-48 w-full">
           {activeCategory && (
             <Link
               to="/products"
@@ -180,13 +180,13 @@ const Products = () => {
             </Link>
           )}
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--turmeric)] mb-3">
-            {activeCategory ? activeCategory.tagline : "What we trade"}
+            {activeCategory ? activeCategory.tagline : "QUALITY ASSURED, GLOBALLY SOURCED"}
           </p>
 
           <h1 className="font-display text-5xl md:text-7xl text-[var(--cream)] max-w-3xl leading-tight">
             {activeCategory
               ? activeCategory.name
-              : "Agricultural commodities, seafood, and specialty chemicals — sourced and shipped from India."}
+              : "Explore Our Premium Product Portfolio"}
           </h1>
         </div>
 

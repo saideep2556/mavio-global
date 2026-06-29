@@ -11,6 +11,7 @@ import Products from "./pages/Products";
 import Accreditations from "./pages/Accreditations";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import WhyUs from "./pages/WhyUs";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="products" element={<Products />} />
       <Route path="products/:slug" element={<Products />} />
       <Route path="accreditations" element={<Accreditations />} />
+      <Route path="why-choose-us" element={<WhyUs />} />
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Route>

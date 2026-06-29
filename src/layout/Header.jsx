@@ -24,6 +24,7 @@ const Header = () => {
     pathname === "/products" ||
     pathname === "/about" ||
     pathname === "/contact" ||
+    pathname === "/why-choose-us" ||
     pathname === "/accreditations" ||
     pathname.startsWith("/products/")
   );

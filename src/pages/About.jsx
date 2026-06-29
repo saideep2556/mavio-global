@@ -49,11 +49,11 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative container-px pb-14 w-full">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--turmeric)] mb-3">Our Purpose</p>
+        <div className="relative container-px pb-48 w-full">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--turmeric)] mb-3">CONNECTING BORDERS, BUILDING TRUST</p>
 
           <h1 className="font-source text-5xl md:text-7xl text-[var(--cream)] max-w-3xl leading-tight">
-            Unlocking the potential of people, nature & science to nourish the world
+            Our Global Footprint & Legacy
           </h1>
         </div>
 
