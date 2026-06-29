@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { certifications } from "../data/content";
 
 const Footer = () => {
+  const scrollToTop = () => {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
   return (
     <footer className="bg-[#f8fbf9] text-[var(--paprika)] mt-32">
       <div className="container-px py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -15,10 +21,11 @@ const Footer = () => {
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-[var(--paprika)] mb-4">Site</p>
           <ul className="flex flex-col gap-2.5 text-sm text-black">
-            <li><Link to="/about" className="hover:text-[var(--turmeric)]">About</Link></li>
-            <li><Link to="/products" className="hover:text-[var(--turmeric)]">Products</Link></li>
-            <li><Link to="/accreditations" className="hover:text-[var(--turmeric)]">Accreditations</Link></li>
-            <li><Link to="/contact" className="hover:text-[var(--turmeric)]">Contact</Link></li>
+            <li><Link onClick={scrollToTop} to="/about" className="hover:text-[var(--turmeric)]">About</Link></li>
+            <li><Link onClick={scrollToTop} to="/why-choose-us" className="hover:text-[var(--turmeric)]">Why Choose US</Link></li>
+            <li><Link onClick={scrollToTop} to="/products" className="hover:text-[var(--turmeric)]">Products</Link></li>
+            <li><Link onClick={scrollToTop} to="/accreditations" className="hover:text-[var(--turmeric)]">Accreditations</Link></li>
+            <li><Link onClick={scrollToTop} to="/contact" className="hover:text-[var(--turmeric)]">Contact</Link></li>
           </ul>
         </div>
 
