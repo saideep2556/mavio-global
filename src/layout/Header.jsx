@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 const navItems = [
   { label: "About", to: "/about" },
+  { label: "Why Choose Us", to: "/why-choose-us" },
   { label: "Products", to: "/products" },
   { label: "Accreditations", to: "/accreditations" },
   { label: "Contact", to: "/contact" },

@@ -1,9 +1,9 @@
 import farm from "../assets/farm-1.jpg"
-import sort from "../assets/sort-2.jpg"
+import sort from "../assets/sort.jpg"
 import lab from "../assets/lab-3.jpg"
 import packing from "../assets/packing-4.jpg"
 import storage from "../assets/storage-5.jpg"
-import logistics from "../assets/logistics-6.jpg"
+import logistics from "../assets/logistics.jpg"
 import Reveal from "./Reveal";
 import SafeImage from "./SafeImage"
 

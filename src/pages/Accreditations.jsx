@@ -1,7 +1,6 @@
-import bannerImage from "../assets/stamp.jpg";
+import bannerImage from "../assets/stamp-img.jpg";
 import Reveal from "../components/Reveal";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import HomeForm from "../components/HomeForm";
 
 
