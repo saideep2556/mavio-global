@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import paddy from "../assets/shipment.jpg"; // Make sure this points to your new ship image
 
 const HomeForm = ({spaceReq=false}) => {
+    const scrollToTop = () => {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className={!spaceReq ? "py-8" : "py-24"}>
       <div className="container-px">
@@ -25,6 +32,7 @@ const HomeForm = ({spaceReq=false}) => {
 
             {/* Button (Pushed to bottom) */}
             <Link
+            onClick={scrollToTop}
               to="/contact"
               className="relative z-10 inline-block px-10 py-4 bg-[var(--cream)] text-[var(--ink)] rounded-full text-sm font-large tracking-wide hover:bg-[var(--cream)] hover:text-[var(--ink)] transition-colors shadow-xl"
             >
