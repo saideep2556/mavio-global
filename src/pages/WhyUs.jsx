@@ -65,11 +65,11 @@ const WhyUs = () => {
                     <div className="bg-[var(--terminal-grey3)] pt-40 pb-20 md:pt-14 md:pb-14">
                         <div className="container-px">
                         <Reveal>
-                            <h1 className="font-playful text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
+                            <h1 className="font-cormorant text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
                             From Local Farms to Global Markets:<br></br>
                             A Supply Chain You Can Trust
                             </h1>
-                            <p className="text-black/80 font-eng font-engg flex flex-col gap-6 py-6 text-lg">
+                            <p className="text-black/80 font-bpmf flex flex-col gap-6 py-6 text-lg">
                                 <p>
                                     We are a premier global sourcing and logistics partner dedicated to bridging the gap between local cultivators and international buyers.
                                  We don't just move goods; we manage the entire lifecycle of the product to guarantee quality, compliance, and freshness.

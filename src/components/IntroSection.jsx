@@ -17,7 +17,7 @@ const IntroSection = ({ introBig, introSmall, introCta }) => {
 
         {/* Right — smaller body + CTA */}
         <Reveal delay={0.12}>
-          <div className="font-eng font-engg flex flex-col gap-8 py-10 text-center">
+          <div className="font-bpmf flex flex-col gap-8 py-10 text-center">
             {introSmall && (
               <p className="text-[var(--black)]/60 text-lg leading-relaxed">
                 {introSmall}

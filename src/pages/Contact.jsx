@@ -6,7 +6,7 @@ import { getCompanySettings } from "../lib/queries";
 import { isSanityConfigured } from "../lib/sanity";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", company: "" });
   const [status, setStatus] = useState("idle"); // idle | submitting | submitted | error
   const [settings, setSettings] = useState(null);
 
@@ -28,7 +28,7 @@ const Contact = () => {
         body: JSON.stringify({
           // TODO: Replace with the key sent to saideepsomineni99@gmail.com
           access_key: "efefa9ef-5092-45af-83e4-23a1054871e1", 
-          subject: `New B2B Enquiry from ${form.name} at ${form.company || 'a new company'}`,
+          subject: `New Enquiry from ${form.name} at ${form.company || 'a new company'}`,
           ...form,
         }),
       });
@@ -78,7 +78,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/45" />
 
         <div className="relative container-px pb-48 w-full">
-          <p className="font-mono text-xs  uppercase tracking-[0.2em] text-[var(--paprika)] mb-3">READY TO EXPAND YOUR REACH?</p>
+          <p className="font-cormorant text-s  uppercase tracking-[0.2em] text-[var(--paprika)] mb-3">READY TO EXPAND YOUR REACH?</p>
           <h1 className="font-source text-5xl md:text-7xl text-[var(--cream)] max-w-3xl leading-tight">
             Let's Build a Global Partnership
           </h1>
@@ -98,12 +98,12 @@ const Contact = () => {
 
       <section id="category-content" className="container-px">
         <div className="py-20 md:pt-28 md:py-14">
-          <div className="bg-[#f8fbf9] pt-40 pb-20 md:pt-14 md:pb-14">
+          <div className="bg-[var(--terminal-grey3)] pt-40 pb-20 md:pt-14 md:pb-14">
             <div className="container-px">
-              <h2 className="font-lora text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--green)] py-6">
+              <h2 className="font-cormorant text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
                 Want to Speak With Our Team?
               </h2>
-              <p className="text-black  font-source flex flex-col gap-8 py-6 ">
+              <p className="text-black font-bpmf flex flex-col gap-8 py-6 ">
                 Whether you're looking to source products, discuss export opportunities,
                 or have questions about our services, we're just a message away.
                 Connect with us on WhatsApp for a quick response.
@@ -130,14 +130,14 @@ const Contact = () => {
         </div>
       </section>
 
-      <section  className="container-px py-20 md:pt-28 md:py-14">
+      <section  className="container-px py-20 md:py-14">
         <div className="grid md:grid-cols-[1fr,1.2fr] gap-14">
           <div>
             <Reveal>
-              <h1 className="font-display text-4xl md:text-5xl tracking-tight leading-tight">
+              <h1 className="font-cormorant text-[var(--blue-light)] text-4xl md:text-6xl tracking-tight leading-tight">
                 Tell us the grade, volume, and port.
               </h1>
-              <p className="text-[var(--charcoal)]/75 mt-6 leading-relaxed max-w-md">
+              <p className="text-[var(--charcoal)] font-bpmf mt-6 leading-relaxed max-w-md">
                 We typically respond with availability and indicative pricing within one working day.
               </p>
             </Reveal>
@@ -145,15 +145,15 @@ const Contact = () => {
             <Reveal delay={0.1}>
               <div className="mt-12 space-y-5 font-mono text-sm">
                 <div>
-                  <p className="text-[var(--paprika)] text-xs uppercase tracking-widest mb-1">Email</p>
+                  <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Email</p>
                   <p>trade@mavioglobal.com</p>
                 </div>
                 <div>
-                  <p className="text-[var(--paprika)] text-xs uppercase tracking-widest mb-1">Head Office</p>
+                  <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Head Office</p>
                   <p>Hyderabad</p>
                 </div>
                 <div>
-                  <p className="text-[var(--paprika)] text-xs uppercase tracking-widest mb-1">Export Ports</p>
+                  <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Export Ports</p>
                   <p>Vizag · Chennai</p>
                 </div>
               </div>
@@ -162,26 +162,26 @@ const Contact = () => {
 
           <Reveal delay={0.12}>
             {status === "submitted" ? (
-              <div className="border border-[var(--line)] bg-[#f8fbf9] rounded-2xl p-10 text-center flex flex-col justify-center h-full">
-                <svg className="w-16 h-16 text-[var(--green)] mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="border border-[var(--gold)] bg-[var(--terminal-grey3)] rounded-2xl p-10 text-center flex flex-col justify-center h-full">
+                <svg className="w-16 h-16 text-[var(--gold)] mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p className="font-display text-3xl mb-3 text-[var(--ink)]">Enquiry Sent.</p>
-                <p className="text-[var(--charcoal)]/80 text-lg">
+                <p className="font-playful text-3xl mb-3 text-[var(--blue-light)]">Enquiry Sent.</p>
+                <p className="text-[var(--charcoal)] font-bpmf text-lg">
                   Thank you for reaching out to Mavio Global. Our trade desk will review your requirements and get back to you within one working day.
                 </p>
                 <button 
                   onClick={() => setStatus("idle")} 
-                  className="mt-8 text-sm font-mono uppercase tracking-widest text-[var(--paprika)] hover:underline"
+                  className="mt-8 text-sm font-mono uppercase tracking-widest text-[var(--blue-light)] hover:underline"
                 >
                   Send another enquiry
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="border border-[var(--line)] p-8 md:p-10 space-y-6">
+              <form onSubmit={handleSubmit} className="border border-[var(--gold)] p-8 md:p-10 space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="font-mono text-xs uppercase tracking-widest text-[var(--charcoal)]/60 mb-2 block">
+                    <label htmlFor="name" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                       Name
                     </label>
                     <input
@@ -191,11 +191,11 @@ const Contact = () => {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-[var(--line)] py-2.5 focus:border-[var(--paprika)] outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="font-mono text-xs uppercase tracking-widest text-[var(--charcoal)]/60 mb-2 block">
+                    <label htmlFor="company" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                       Company
                     </label>
                     <input
@@ -204,13 +204,13 @@ const Contact = () => {
                       type="text"
                       value={form.company}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-[var(--line)] py-2.5 focus:border-[var(--paprika)] outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="font-mono text-xs uppercase tracking-widest text-[var(--charcoal)]/60 mb-2 block">
+                  <label htmlFor="email" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                     Email
                   </label>
                   <input
@@ -220,25 +220,83 @@ const Contact = () => {
                     required
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-b border-[var(--line)] py-2.5 focus:border-[var(--paprika)] outline-none transition-colors"
+                    className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
                   />
                 </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  <div>
+    <label
+      htmlFor="product"
+      className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+    >
+      Product
+    </label>
+    <input
+      id="product"
+      name="product"
+      type="text"
+      required
+      value={form.product}
+      onChange={handleChange}
+      className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
+    />
+  </div>
+
+  <div>
+    <label
+      htmlFor="grade"
+      className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+    >
+      Grade
+    </label>
+    <input
+      id="grade"
+      name="grade"
+      type="text"
+      value={form.grade}
+      onChange={handleChange}
+      className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
+    />
+  </div>
+</div>
+
+<div>
+  <label
+    htmlFor="destination"
+    className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+  >
+    Destination
+  </label>
+  <input
+    id="destination"
+    name="destination"
+    type="text"
+    required
+    value={form.destination}
+    onChange={handleChange}
+    className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
+  />
+</div>
+
+                
+
                 <div>
-                  <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-[var(--charcoal)]/60 mb-2 block">
-                    What do you need?
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    placeholder="Grade, volume, destination port, target month…"
-                    value={form.message}
-                    onChange={handleChange}
-                    className="w-full bg-transparent border-b border-[var(--line)] py-2.5 focus:border-[var(--paprika)] outline-none transition-colors resize-none placeholder:text-[var(--charcoal)]/35"
-                  />
-                </div>
+  <label
+    htmlFor="comments"
+    className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+  >
+    Additional Comments
+  </label>
+  <textarea
+    id="comments"
+    name="comments"
+    rows={4}
+    value={form.comments}
+    onChange={handleChange}
+    className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors resize-none placeholder:text-[var(--charcoal)]/35"
+  />
+</div>
                 
                 {status === "error" && (
                   <p className="text-red-500 text-sm">Something went wrong. Please try again or email us directly.</p>
@@ -257,7 +315,7 @@ const Contact = () => {
         </div>
 
         <Reveal>
-          <div className="py-14 font-display text-4xl md:text-5xl tracking-tight leading-tight text-center">Let's Connect</div>
+          <div className="py-14 font-cormorant text-4xl md:text-6xl text-[var(--blue-light)] tracking-tight leading-tight text-center">Let's Connect</div>
           <ContactCtaStrip
             contactCta={settings?.contactCta}
             socialLinks={settings?.socialLinks}

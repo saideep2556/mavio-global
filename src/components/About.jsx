@@ -8,7 +8,7 @@ const About = ({ sectionText }) => {
           {sectionText.heading}
         </h2>
 
-        <p className="mt-8 text-2xl  leading-8 text-black/80 font-eng font-engg">
+        <p className="mt-8 text-2xl  leading-8 text-black/80 font-boogalu">
           {sectionText.body}
         </p>
       </div>

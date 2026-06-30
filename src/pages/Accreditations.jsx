@@ -100,11 +100,11 @@ const CertCard = ({ cert, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-40px" }}
     transition={{ duration: 0.5, delay: index * 0.05 }}
-    className="group border border-[var(--line)] rounded-2xl p-7 md:p-8 bg-white hover:border-[var(--paprika)]/40 hover:shadow-md transition-all duration-300"
+    className="group border border-[var(--gold)] rounded-2xl p-7 md:p-8 bg-white hover:border-[var(--gold)] hover:shadow-xl transition-all duration-300"
   >
     <div className="flex items-start justify-between gap-4 mb-5">
       {/* Code badge */}
-      <span className="font-mono text-xs uppercase tracking-widest px-3 py-1.5 bg-[var(--terminal-grey3)] text-[var(--paprika)] rounded-full shrink-0">
+      <span className="font-mono text-xs uppercase tracking-widest px-3 py-1.5 bg-[var(--terminal-grey3)] text-[var(--gold)] rounded-full shrink-0">
         {cert.code}
       </span>
 
@@ -116,27 +116,27 @@ const CertCard = ({ cert, index }) => (
       </span>
     </div>
 
-    <h3 className="font-display text-xl md:text-2xl text-[var(--ink)] mb-1 leading-tight">
+    <h3 className="font-display text-xl md:text-2xl text-[var(--blue-light)] mb-1 leading-tight">
       {cert.name}
     </h3>
-    <p className="font-mono text-xs text-[var(--charcoal)]/50 mb-4 leading-relaxed">
+    <p className="font-mono text-xs text-[var(--charcoal)] mb-4 leading-relaxed">
       {cert.fullName}
     </p>
 
-    <p className="text-sm text-[var(--charcoal)]/75 leading-relaxed mb-5">
+    <p className="text-sm text-[var(--charcoal)] font-bpmf leading-relaxed mb-5">
       {cert.description}
     </p>
 
-    <div className="border-t border-[var(--line)] pt-4 flex flex-col gap-1.5">
-      <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--charcoal)]/40">
+    <div className="border-t border-[var(--gold)] pt-4 flex flex-col gap-1.5">
+      <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--blue-light)]">
         Issuing Body
       </p>
-      <p className="text-sm text-[var(--charcoal)]/70">{cert.body}</p>
+      <p className="text-sm text-[var(--charcoal)] font-mono">{cert.body}</p>
 
-      <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--charcoal)]/40 mt-2">
+      <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-2">
         Scope
       </p>
-      <p className="text-sm text-[var(--paprika)] font-mono">{cert.scope}</p>
+      <p className="text-sm text-[var(--gold)] font-semibold font-mono">{cert.scope}</p>
     </div>
   </motion.div>
 );
@@ -208,10 +208,10 @@ const Accreditations = () => {
       <div className="bg-[var(--terminal-grey3)] pt-40 pb-20 md:pt-14 md:pb-14">
         <div className="container-px">
           <Reveal>
-            <h1 className="font-playful text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
+            <h1 className="font-cormorant text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
               Certifications & Accreditations
             </h1>
-            <p className="text-black font-eng font-engg flex flex-col gap-8 py-6 ">
+            <p className="text-black font-bpmf text-lg flex flex-col gap-8 py-6 ">
               Every consignment Mavio Global ships is backed by a compliance
               framework that meets the regulatory requirements of importing
               countries across the EU, USA, Middle East, and Southeast Asia.
@@ -221,14 +221,14 @@ const Accreditations = () => {
           {/* Summary stats */}
           <div className="grid grid-cols-3 gap-6 mt-6 max-w-lg">
             {[
-              { value: "9", label: "Active Certifications" },
+              { value: "6", label: "Active Certifications" },
               { value: "42+", label: "Export Markets" },
               { value: "100%", label: "Compliance Rate" },
             ].map((stat) => (
               <Reveal key={stat.label}>
                 <div className="border-t border-[var(--cream)]/20 pt-4">
                   <p className="font-mono text-3xl text-[var(--blue-light)]">{stat.value}</p>
-                  <p className="text-xs text-black font-eng font-engg mt-1">{stat.label}</p>
+                  <p className="text-s text-black font-bpmf mt-1">{stat.label}</p>
                 </div>
               </Reveal>
             ))}

@@ -256,11 +256,11 @@ const Products = () => {
             
             <Reveal>
               <div className="max-w-5xl">
-                <h2 className="font-playful text-5xl mb-6 text-[var(--blue-light)]">
+                <h2 className="font-cormorant text-6xl mb-6 text-[var(--blue-light)]">
                   Products We Export
                 </h2>
 
-                <p className="text-lg font-eng font-engg leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
+                <p className="text-lg font-bpmf leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
                   Mavio Global supplies a wide portfolio of agricultural commodities,
                   seafood, and specialty chemicals. Leveraging India's rich agricultural
                   diversity and world-class processing infrastructure, our integrated supply
@@ -285,7 +285,7 @@ const Products = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Reveal>
-                  <p className="text-[var(--black)]/80 font-eng font-engg text-lg leading-relaxed max-w-2xl mb-10">
+                  <p className="text-[var(--black)]/80 font-bpmf text-lg leading-relaxed max-w-2xl mb-10">
                     {activeCategory?.description}
                   </p>
                 </Reveal>
@@ -326,11 +326,11 @@ const Products = () => {
 
                             {/* Content */}
                             <div className="flex flex-col flex-1">
-                              <h4 className="font-playful  text-2xl md:text-3xl text-[var(--blue-light)] tracking-tighter mb-3">
+                              <h4 className="font-cormorant  text-2xl md:text-4xl text-[var(--blue-light)] tracking-tighter mb-3">
                                 {p.name}
                               </h4>
                               {p.description && (
-                                <p className="text-[var(--black)]/70 leading-relaxed">
+                                <p className="text-[var(--black)] font-bpmf leading-relaxed">
                                   {p.description}
                                 </p>
                               )}

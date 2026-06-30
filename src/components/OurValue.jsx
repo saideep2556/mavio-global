@@ -1,8 +1,6 @@
 import farm from "../assets/farm-1.jpg"
 import sort from "../assets/sort.jpg"
-import lab from "../assets/lab-3.jpg"
 import packing from "../assets/packing-4.jpg"
-import storage from "../assets/storage-5.jpg"
 import logistics from "../assets/logistics.jpg"
 import Reveal from "./Reveal";
 import SafeImage from "./SafeImage"
@@ -11,7 +9,7 @@ const OurValue = () => {
   return (
     <div className="container-px pt-16 pb-12">
       <Reveal>
-        <h3 className="font-playful text-5xl mb-8 text-[var(--blue-light)]">
+        <h3 className="font-cormorant text-5xl mb-8 text-[var(--blue-light)]">
           Our Value Chain: Farm to Global Delivery
         </h3>
       </Reveal>
@@ -28,8 +26,8 @@ const OurValue = () => {
               className="w-full md:w-1/2 object-cover bg-[var(--cream-dim)] h-64 md:h-[30rem]"
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Farm Sourcing</h4>
-              <p className="text-black text-lg font-eng font-engg text-base leading-relaxed">
+              <h4 className="font-cormorant text-5xl font-semibold mb-3 text-[var(--blue-light)]">Farm Sourcing</h4>
+              <p className="text-black text-lg font-bpmf text-base leading-relaxed">
                 Direct partnerships with curated contract farmers ensuring Good Agricultural Practices (GAP) and traceability.
               </p>
             </div>
@@ -46,8 +44,8 @@ const OurValue = () => {
               className="w-full md:w-1/2 object-cover bg-[var(--cream-dim)] h-64 md:h-[30rem]"
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Sorting & Grading</h4>
-              <p className="text-black text-lg font-eng font-engg text-base leading-relaxed">
+              <h4 className="font-cormorant text-5xl font-semibold mb-3 text-[var(--blue-light)]">Sorting & Grading</h4>
+              <p className="text-black text-lg font-bpmf text-base leading-relaxed">
                 Multi-step optical sorting and size grading to screen out contaminants for precise export classification.
               </p>
             </div>
@@ -64,10 +62,10 @@ const OurValue = () => {
               className="w-full md:w-1/2 object-cover bg-[var(--cream-dim)] h-64 md:h-[30rem]"
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">
+              <h4 className="font-cormorant text-5xl font-semibold mb-3 text-[var(--blue-light)]">
                 Processing & Packing
               </h4>
-              <p className="text-black text-lg font-eng font-engg text-base leading-relaxed">
+              <p className="text-black text-lg font-bpmf text-base leading-relaxed">
                 Handled in HACCP & USFDA-compliant facilities. Customizable packaging from retail to industrial bulk.
               </p>
             </div>
@@ -84,8 +82,8 @@ const OurValue = () => {
               className="w-full md:w-1/2 object-cover bg-[var(--cream-dim)] h-64 md:h-[30rem]"
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Global Logistics</h4>
-              <p className="text-black text-lg font-eng font-engg text-base leading-relaxed">
+              <h4 className="font-cormorant text-5xl font-semibold mb-3 text-[var(--blue-light)]">Global Logistics</h4>
+              <p className="text-black text-lg font-bpmf text-base leading-relaxed">
                 End-to-end management including customs clearance, export documentation, and real-time shipment tracking.
               </p>
             </div>
