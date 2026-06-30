@@ -30,7 +30,7 @@ export default function FeatureSection() {
               Trust every step
             </h3>
 
-            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng mt-4">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng font-engg mt-4">
               From fields to production & finishing, we control our vertically integrated supply chain
               that reliably delivers the highest quality natural ingredients.
             </p>
@@ -65,7 +65,7 @@ export default function FeatureSection() {
               Be fully supported
             </h3>
 
-            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng mt-4">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng font-engg mt-4">
               From your first contact with customer service to direct access to our industry experts,
               our highly responsive team provides a personalized customer experience.
             </p>
@@ -99,7 +99,7 @@ export default function FeatureSection() {
               Find your path
             </h3>
 
-            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng mt-4">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs font-eng font-engg mt-4">
               Work hand-in-hand with our scientists, growers, procurement team & regulatory experts
               to tackle your unique challenges.
             </p>

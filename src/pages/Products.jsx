@@ -260,7 +260,7 @@ const Products = () => {
                   Products We Export
                 </h2>
 
-                <p className="text-lg font-eng leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
+                <p className="text-lg font-eng font-engg leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
                   Mavio Global supplies a wide portfolio of agricultural commodities,
                   seafood, and specialty chemicals. Leveraging India's rich agricultural
                   diversity and world-class processing infrastructure, our integrated supply
@@ -285,7 +285,7 @@ const Products = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Reveal>
-                  <p className="text-[var(--black)]/80 font-eng text-lg leading-relaxed max-w-2xl mb-10">
+                  <p className="text-[var(--black)]/80 font-eng font-engg text-lg leading-relaxed max-w-2xl mb-10">
                     {activeCategory?.description}
                   </p>
                 </Reveal>
