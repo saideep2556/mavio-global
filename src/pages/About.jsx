@@ -5,7 +5,7 @@ import Gallery from "../components/Gallery";
 import SafeImage from "../components/SafeImage";
 import { leadership, milestones, company, images } from "../data/content";
 import { Link } from "react-router-dom";
-import bannerImage from "../assets/about-us.jpg";
+import bannerImage from "../assets/about.jpg";
 import IntroSection from "../components/IntroSection";
 import { useState, useEffect } from "react";
 import { getCompanySettings } from "../lib/queries";
@@ -94,7 +94,7 @@ const About = () => {
 
       <div className="container-px py-14">
   {/* Added px-8 md:px-16 lg:px-24, gap, and rounded-3xl to frame the layout perfectly */}
-  <div className="bg-[#f8fbf9] overflow-hidden flex flex-col md:flex-row-reverse py-16 px-8 md:px-16 lg:px-24 items-center gap-12 lg:gap-20">
+  <div className="bg-[var(--terminal-grey3)] overflow-hidden flex flex-col md:flex-row-reverse py-16 px-8 md:px-16 lg:px-24 items-center gap-12 lg:gap-20">
     
     <SafeImage 
       src={farm} 
@@ -105,10 +105,10 @@ const About = () => {
     />
     
     <div className="w-full md:w-7/12 lg:w-3/5 flex flex-col justify-center">
-      <h4 className="font-display text-4xl mb-6 text-[var(--green)]">
+      <h4 className="font-playful text-4xl bold mb-6 text-[var(--blue-light)]">
         Delivering Agricultural Excellence on a Global Scale
       </h4>
-      <div className="text-[var(--charcoal)] font-source text-base leading-relaxed space-y-6">
+      <div className="text-[var(--charcoal)] bpmf text-base leading-relaxed space-y-6">
         <p>
           With our headquarters in Hyderabad, Telangana, and a strategic procurement network spanning India's most premium agricultural hubs, Mavio Global is a trusted international leader in the export of agricultural commodities, seafood, and specialty chemicals. Because we source directly from curated farming communities and state-of-the-art processing facilities, we help you secure the highest quality products that meet the rigorous regulatory expectations of today’s global markets.
         </p>

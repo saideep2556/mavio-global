@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import logo from "../assets/Logo_transpararent.png"
 
 const navItems = [
   { label: "About", to: "/about" },
@@ -48,16 +49,16 @@ const showSolid = scrolled || !hasTransparentHeader;
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         showSolid
-          ? "bg-[var(--cream)]/95 backdrop-blur-sm border-b border-[var(--line)]"
+          ? "bg-[#021023] backdrop-blur-sm border-b border-[var(--line)]"
           : "bg-transparent"
       }`}
     >
       <motion.div
         style={{ scaleX: progressWidth }}
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--paprika)] origin-left"
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--gold)] origin-left"
       />
 
-      <div className="container-px flex items-center justify-between h-20">
+      <div className="container-px max-w-7xl mx-auto flex items-center justify-between h-25">
 
         {/* Logo — white before scroll, ink after */}
         <Link
@@ -66,14 +67,13 @@ const showSolid = scrolled || !hasTransparentHeader;
             setOpen(false);
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="font-display text-xl md:text-2xl tracking-tight transition-colors duration-300"
+          className="flex items-center"
         >
-          <span className={showSolid ? "text-[var(--ink)]" : "text-[var(--cream)]"}>
-            Mavio{" "}
-          </span>
-          <span className={showSolid ? "text-[var(--paprika)]" : "text-[var(--cream)]/70"}>
-            Global
-          </span>
+          <img
+            src={logo}
+            alt="Mavio Global"
+            className="h-12 md:h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -87,12 +87,12 @@ const showSolid = scrolled || !hasTransparentHeader;
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className={({ isActive }) =>
-                `text-sm font-medium tracking-wide transition-colors duration-300 ${
+                `text-lg tracking-wide transition-colors duration-300 ${
                   isActive
                     ? "text-[var(--paprika)]"
                     : showSolid
-                    ? "text-[var(--charcoal)] hover:text-[var(--paprika)]"
-                    : "text-[var(--cream)]/85 hover:text-[var(--cream)]"
+                    ? "text-[var(--gold)] hover:text-[var(--cream)]"
+                    : "text-[var(--cream)]   hover:text-[var(--gold)]"
                 }`
               }
             >

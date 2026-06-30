@@ -8,7 +8,7 @@ const CategoryGrid = ({ categories = [] , isProductPage = false }) => {
   if (!categories.length) return null;
 
   return (
-    <section className={isProductPage ? "pt-0 pb-20" : "py-20 md:py-28"}>
+    <section className={isProductPage ? "pt-0 pb-20" : "pt-16 md:pb-12"}>
       <div className={isProductPage ? "" : "container-px"}>
           {!isProductPage && (
             <>
@@ -16,13 +16,13 @@ const CategoryGrid = ({ categories = [] , isProductPage = false }) => {
               <SectionHeading
               eyebrow="What we trade"
               title="Our Product Categories"
-              body="From farm clusters across India to processors and retailers in 42 countries."
+              body="From farm clusters across India to processors and retailers in 10+ countries."
             />
             
             <Reveal delay={0.1}>
             <Link
               to="/products"
-              className="font-mono text-xs uppercase tracking-widest text-[var(--paprika)] hover:underline whitespace-nowrap"
+              className="font-mono text-xs uppercase tracking-widest text-[var(--gold2)] hover:underline whitespace-nowrap"
             >
               View all products →
             </Link>

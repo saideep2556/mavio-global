@@ -219,18 +219,18 @@ const Products = () => {
         className="container-px flex flex-col md:flex-row min-h-[60vh]"
       >
         {/* Left sidebar — category list */}
-        <div className="md:w-72 shrink-0 border-r border-[var(--line)] py-8 md:py-12 pr-0 md:pr-8">
+        <div className="md:w-72 shrink-0 border-r border-[var(--gold)] py-8 md:py-12 pr-0 md:pr-8">
           <nav className="flex flex-col">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
                 to={`/products/${cat.slug}`}
-                className={`flex items-center justify-between py-4 border-b border-[var(--line)] transition-colors`}
+                className={`flex items-center justify-between py-4 border-b border-[var(--gold)] transition-colors`}
               >
                 <span className={`font-display text-lg transition-colors
                   ${
                       slug === cat.slug
-                        ? "text-[var(--paprika)] underline underline-offset-4"
+                        ? "text-[var(--blue-light)] underline underline-offset-4"
                         : "text-[var(--charcoal)] hover:text-[var(--green)]"
                     }`}>
                   {cat.name}
@@ -239,8 +239,8 @@ const Products = () => {
                 <span
                   className={`transition-transform ${
                     slug === cat.slug
-                      ? "translate-x-1 text-[var(--paprika)]"
-                      : "text-[var(--charcoal)]/40"
+                      ? "translate-x-1 text-[var(--blue-light)]"
+                      : "text-[var(--gold)]"
                   }`}
                 >
                   ›
@@ -256,18 +256,18 @@ const Products = () => {
             
             <Reveal>
               <div className="max-w-5xl">
-                <h2 className="font-display text-5xl mb-6 text-[var(--ink)]">
+                <h2 className="font-playful text-5xl mb-6 text-[var(--blue-light)]">
                   Products We Export
                 </h2>
 
-                <p className="text-lg leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
+                <p className="text-lg bpmf leading-relaxed text-[var(--black)]/80 mb-6 max-w-3xl">
                   Mavio Global supplies a wide portfolio of agricultural commodities,
                   seafood, and specialty chemicals. Leveraging India's rich agricultural
                   diversity and world-class processing infrastructure, our integrated supply
                   chain ensures every consignment meets destination regulatory standards.
                 </p>
 
-                <hr className="border-[var(--line)] my-12" />
+                <hr className="border-[var(--gold)] my-12" />
 
                 <CategoryGrid categories={categories}  isProductPage = {true}  />
 
@@ -285,17 +285,17 @@ const Products = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Reveal>
-                  <p className="text-[var(--black)]/80 text-lg leading-relaxed max-w-2xl mb-10">
+                  <p className="text-[var(--black)]/80 bpmf text-lg leading-relaxed max-w-2xl mb-10">
                     {activeCategory?.description}
                   </p>
                 </Reveal>
 
                 {activeCategory?.products?.length > 0 && (
                   <Reveal delay={0.08}>
-                    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
+                    <div className="flex flex-col divide-y divide-[var(--gold)] mb-10">
                       {activeCategory?.products?.length > 0 && (
                   <Reveal delay={0.08}>
-                    <div className="flex flex-col divide-y divide-[var(--line)] mb-10">
+                    <div className="flex flex-col divide-y divide-[var(--gold)] mb-10">
                       {activeCategory.products.map((p, i) => (
                           <motion.div
                             key={i}
@@ -326,7 +326,7 @@ const Products = () => {
 
                             {/* Content */}
                             <div className="flex flex-col flex-1">
-                              <h4 className="font-poppins  text-2xl md:text-3xl text-[var(--green)] tracking-tighter mb-3">
+                              <h4 className="font-playful  text-2xl md:text-3xl text-[var(--blue-light)] tracking-tighter mb-3">
                                 {p.name}
                               </h4>
                               {p.description && (

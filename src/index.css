@@ -3,16 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bpmf+Iansui&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-lora: "Lora", serif;
   --font-source: "Source Sans 3", sans-serif;
+  --font-cinzel: "Cinzel Decorative", serif;
+  --font-playful : "Playfair Display SC", serif;
+  --font-cormorant : "Cormorant Garamond", serif:
+  --font-bpmf: "Bpmf Iansui", cursive;
 }
 
 
 :root {
-  /* Color tokens — drawn from the trade itself: sacking cream, paprika, bay leaf, turmeric, coffee-bean dark */
   --cream: #fff;
   --cream-dim: #EEE5D3;
   --ink: #1C1410;
@@ -26,11 +29,25 @@
   --green: rgb(24, 76, 38);
   --lightgreen: rgb(138 247 167);
   --grey: #FAFAFA;
-  --transparent : rgba(0,0,0,0)
+  --transparent : rgba(0,0,0,0);
+  --mavio-blue : #021023;
+  --blue-light : #072a5a;
+  /* --gold : #D4AF37; */
+  --gold : #E0B05A;
+  --gold2: #ffbf00;
+  --terminal-grey: #daefff;
+  --terminal-grey2: #daefff99;
+  --terminal-grey3: #daefff45;
 
   --font-display: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --font-cinzel: "Cinzel Decorative", serif;
+  --font-playful : "Playfair Display SC", serif;
+  --font-cormorant : "Cormorant Garamond", serif:
+  --font-bpmf : "Bpmf Iansui", cursive;
+
+
 
 
   --container: 1320px;
@@ -99,6 +116,10 @@ textarea:focus-visible {
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: 1.5rem;
+}
+
+.bpmf {
+  font-family: "Bpmf Iansui", cursive;
 }
 
 @media (min-width: 768px) {

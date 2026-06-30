@@ -1,5 +1,5 @@
 import Reveal from "../components/Reveal";
-import bannerImage from "../assets/contact.jpg";
+import bannerImage from "../assets/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg";
 import ContactCtaStrip from "../components/ContactCtaStrip";
 import { useState, useEffect } from "react";
 import { getCompanySettings } from "../lib/queries";
@@ -78,7 +78,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/45" />
 
         <div className="relative container-px pb-48 w-full">
-          <p className="font-mono text-xs  uppercase tracking-[0.2em] text-black mb-3">READY TO EXPAND YOUR REACH?</p>
+          <p className="font-mono text-xs  uppercase tracking-[0.2em] text-[var(--paprika)] mb-3">READY TO EXPAND YOUR REACH?</p>
           <h1 className="font-source text-5xl md:text-7xl text-[var(--cream)] max-w-3xl leading-tight">
             Let's Build a Global Partnership
           </h1>

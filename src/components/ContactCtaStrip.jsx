@@ -55,8 +55,7 @@ const ContactCtaStrip = ({ socialLinks, socialImages }) => {
         - Horizontal scroll + snap on mobile
         - Equal columns side-by-side on desktop 
       */}
-      <div className="flex w-full h-[400px] md:h-[350px] overflow-x-auto md:overflow-x-hidden snap-x snap-mandatory hide-scrollbar">
-        {socialOrder.map((key) => {
+      <div className="flex w-full h-[400px] md:h-[350px] gap-4 px-4 overflow-x-auto md:overflow-x-hidden snap-x snap-mandatory hide-scrollbar">        {socialOrder.map((key) => {
           const item = socialImages?.find((s) => s.social === key);
           const href = socialLinks?.[key];
 
@@ -66,7 +65,7 @@ const ContactCtaStrip = ({ socialLinks, socialImages }) => {
               href={href || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex-shrink-0 w-[85vw] md:w-1/5 h-full snap-center overflow-hidden block border-r border-white/10 last:border-r-0"
+              className="group relative flex-shrink-0 w-[85vw] md:flex-1 h-full snap-center overflow-hidden rounded-2xl block shadow-lg"
             >
               {/* Background Image */}
               {item?.imageUrl ? (

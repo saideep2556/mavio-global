@@ -1,10 +1,10 @@
 export default function FeatureSection() {
   return (
-    <section className="w-full min-h-screen bg-[#f8fbf9] bg-cover bg-center bg-no-repeat mt-12 py-12 px-6 flex flex-col justify-center items-center">
-      <div className="max-w-6xl w-full mx-auto text-[var(--green)] text-center">
+    <section className="w-full min-h-screen bg-[var(--terminal-grey3)] bg-cover bg-center bg-no-repeat mt-12 py-12 px-6 flex flex-col justify-center items-center">
+      <div className="max-w-6xl w-full mx-auto text-[var(--blue-light)] text-center">
         
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl  font-poppins font-medium leading-snug">
+        <h2 className="text-3xl md:text-5xl font-playful font-medium leading-snug">
           Partnership, Reliability, & Innovation <br />
           You Can Count On
         </h2>
@@ -30,7 +30,7 @@ export default function FeatureSection() {
               Trust every step
             </h3>
 
-            <p className="text-m text-black leading-relaxed max-w-xs">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs bpmf mt-4">
               From fields to production & finishing, we control our vertically integrated supply chain
               that reliably delivers the highest quality natural ingredients.
             </p>
@@ -65,7 +65,7 @@ export default function FeatureSection() {
               Be fully supported
             </h3>
 
-            <p className="text-m text-black leading-relaxed max-w-xs">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs bpmf mt-4">
               From your first contact with customer service to direct access to our industry experts,
               our highly responsive team provides a personalized customer experience.
             </p>
@@ -99,7 +99,7 @@ export default function FeatureSection() {
               Find your path
             </h3>
 
-            <p className="text-m text-black leading-relaxed max-w-xs">
+            <p className="text-lg text-black/80 leading-relaxed max-w-xs bpmf mt-4">
               Work hand-in-hand with our scientists, growers, procurement team & regulatory experts
               to tackle your unique challenges.
             </p>

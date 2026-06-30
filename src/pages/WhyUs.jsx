@@ -62,19 +62,19 @@ const WhyUs = () => {
         <Reveal>
             <div id="category-content" className="container-px">
                 <div className="py-20 md:pt-28 md:py-14">
-                    <div className="bg-[#f8fbf9] pt-40 pb-20 md:pt-14 md:pb-14">
+                    <div className="bg-[var(--terminal-grey3)] pt-40 pb-20 md:pt-14 md:pb-14">
                         <div className="container-px">
                         <Reveal>
-                            <h1 className="font-lora text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--green)] py-6">
+                            <h1 className="font-playful text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
                             From Local Farms to Global Markets:<br></br>
                             A Supply Chain You Can Trust
                             </h1>
-                            <p className="text-black  font-source flex flex-col gap-6 py-6 ">
+                            <p className="text-black/80 bpmf flex flex-col gap-6 py-6 text-lg">
                                 <p>
                                     We are a premier global sourcing and logistics partner dedicated to bridging the gap between local cultivators and international buyers.
                                  We don't just move goods; we manage the entire lifecycle of the product to guarantee quality, compliance, and freshness.
                                 </p>
-                                <p className="text-xl font-semibold">The Farm-to-Global Process</p>
+                                <p className="text-2xl text-[var(--blue-light)]   font-semibold">The Farm-to-Global Process</p>
                                     <ul><b>Ethical Sourcing:</b> Partnering directly with certified local farms to harvest premium, sustainable produce.</ul>
                                     <ul><b>Quality & Compliance:</b> Conducting rigorous on-site inspections and ensuring all phytosanitary and international trade certifications are met before shipping.</ul>
                                     <ul><b>Cold-Chain Logistics:</b> Utilizing advanced warehousing and climate-controlled freight to preserve peak freshness during transit.  </ul>
@@ -87,7 +87,6 @@ const WhyUs = () => {
                     <div className="mt-12">
                         <video
                             className="w-full rounded-xl shadow-xl"
-                            controls
                             autoPlay
                             muted
                             loop

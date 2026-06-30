@@ -15,14 +15,14 @@ const CertMarquee = () => {
   const doubled = [...certifications, ...certifications];
 
   return (
-    <div className="overflow-hidden border-y border-[var(--line)] bg-[var(--cream)] py-5">
+    <div className="overflow-hidden border-y border-[var(--gold)] bg-[var(--cream)] py-5">
       <div className="flex w-max animate-marquee gap-12">
         {doubled.map((cert, i) => (
           <span
             key={`${cert}-${i}`}
-            className="font-mono text-xs uppercase tracking-widest text-[var(--charcoal)]/55 whitespace-nowrap flex items-center gap-3"
+            className="font-mono text-xs uppercase tracking-widest text-[var(--blue-light)] bold whitespace-nowrap flex items-center gap-3"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)]" />
             {cert}
           </span>
         ))}
