@@ -108,7 +108,7 @@ const About = () => {
       <h4 className="font-playful text-4xl bold mb-6 text-[var(--blue-light)]">
         Delivering Agricultural Excellence on a Global Scale
       </h4>
-      <div className="text-[var(--charcoal)] bpmf text-base leading-relaxed space-y-6">
+      <div className="text-[var(--charcoal)] font-eng text-base leading-relaxed space-y-6">
         <p>
           With our headquarters in Hyderabad, Telangana, and a strategic procurement network spanning India's most premium agricultural hubs, Mavio Global is a trusted international leader in the export of agricultural commodities, seafood, and specialty chemicals. Because we source directly from curated farming communities and state-of-the-art processing facilities, we help you secure the highest quality products that meet the rigorous regulatory expectations of today’s global markets.
         </p>

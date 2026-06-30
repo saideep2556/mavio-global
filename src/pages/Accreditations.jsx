@@ -211,7 +211,7 @@ const Accreditations = () => {
             <h1 className="font-playful text-2xl md:text-3xl lg:text-6xl  leading-tight text-[var(--blue-light)] py-6">
               Certifications & Accreditations
             </h1>
-            <p className="text-black bpmf flex flex-col gap-8 py-6 ">
+            <p className="text-black font-eng flex flex-col gap-8 py-6 ">
               Every consignment Mavio Global ships is backed by a compliance
               framework that meets the regulatory requirements of importing
               countries across the EU, USA, Middle East, and Southeast Asia.
@@ -228,7 +228,7 @@ const Accreditations = () => {
               <Reveal key={stat.label}>
                 <div className="border-t border-[var(--cream)]/20 pt-4">
                   <p className="font-mono text-3xl text-[var(--blue-light)]">{stat.value}</p>
-                  <p className="text-xs text-black bpmf mt-1">{stat.label}</p>
+                  <p className="text-xs text-black font-eng mt-1">{stat.label}</p>
                 </div>
               </Reveal>
             ))}

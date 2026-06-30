@@ -29,7 +29,7 @@ const OurValue = () => {
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
               <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Farm Sourcing</h4>
-              <p className="text-black text-lg bpmf text-base leading-relaxed">
+              <p className="text-black text-lg font-eng text-base leading-relaxed">
                 Direct partnerships with curated contract farmers ensuring Good Agricultural Practices (GAP) and traceability.
               </p>
             </div>
@@ -47,7 +47,7 @@ const OurValue = () => {
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
               <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Sorting & Grading</h4>
-              <p className="text-black text-lg bpmf text-base leading-relaxed">
+              <p className="text-black text-lg font-eng text-base leading-relaxed">
                 Multi-step optical sorting and size grading to screen out contaminants for precise export classification.
               </p>
             </div>
@@ -67,7 +67,7 @@ const OurValue = () => {
               <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">
                 Processing & Packing
               </h4>
-              <p className="text-black text-lg bpmf text-base leading-relaxed">
+              <p className="text-black text-lg font-eng text-base leading-relaxed">
                 Handled in HACCP & USFDA-compliant facilities. Customizable packaging from retail to industrial bulk.
               </p>
             </div>
@@ -85,7 +85,7 @@ const OurValue = () => {
             />
             <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
               <h4 className="font-playful text-4xl font-semibold mb-3 text-[var(--blue-light)]">Global Logistics</h4>
-              <p className="text-black text-lg bpmf text-base leading-relaxed">
+              <p className="text-black text-lg font-eng text-base leading-relaxed">
                 End-to-end management including customs clearance, export documentation, and real-time shipment tracking.
               </p>
             </div>

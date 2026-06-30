@@ -69,7 +69,7 @@ const WhyUs = () => {
                             From Local Farms to Global Markets:<br></br>
                             A Supply Chain You Can Trust
                             </h1>
-                            <p className="text-black/80 bpmf flex flex-col gap-6 py-6 text-lg">
+                            <p className="text-black/80 font-eng flex flex-col gap-6 py-6 text-lg">
                                 <p>
                                     We are a premier global sourcing and logistics partner dedicated to bridging the gap between local cultivators and international buyers.
                                  We don't just move goods; we manage the entire lifecycle of the product to guarantee quality, compliance, and freshness.
