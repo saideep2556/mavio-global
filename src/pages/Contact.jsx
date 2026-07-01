@@ -27,7 +27,7 @@ const Contact = () => {
         },
         body: JSON.stringify({
           // TODO: Replace with the key sent to saideepsomineni99@gmail.com
-          access_key: "efefa9ef-5092-45af-83e4-23a1054871e1", 
+          access_key: "2fef6c33-2aaf-4816-a312-2a747bbd2684", 
           subject: `New Enquiry from ${form.name} at ${form.company || 'a new company'}`,
           ...form,
         }),
@@ -110,7 +110,7 @@ const Contact = () => {
               </p>
 
               <a
-                href="https://wa.me/916309566002?text=Hello!%20I'm%20interested%20in%20your%20import%20and%20export%20services.%20I'd%20like%20to%20know%20more."
+                href="https://wa.me/9182043910?text=Hello!%20I'm%20interested%20in%20your%20import%20and%20export%20services.%20I'd%20like%20to%20know%20more."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-8 bg-[#25D366] text-black font-semibold px-8 py-4 rounded-full hover:scale-105 transition duration-300"
@@ -135,26 +135,22 @@ const Contact = () => {
           <div>
             <Reveal>
               <h1 className="font-cormorant text-[var(--blue-light)] text-4xl md:text-6xl tracking-tight leading-tight">
-                Tell us the grade, volume, and port.
+                Tell us the Grade, Volume, and Port.
               </h1>
-              <p className="text-[var(--charcoal)] font-bpmf mt-6 leading-relaxed max-w-md">
+              <span className="text-[var(--charcoal)] text-lg font-bpmf mt-28 leading-relaxed max-w-md">
                 We typically respond with availability and indicative pricing within one working day.
-              </p>
+              </span  >
             </Reveal>
 
             <Reveal delay={0.1}>
               <div className="mt-12 space-y-5 font-mono text-sm">
                 <div>
                   <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Email</p>
-                  <p>trade@mavioglobal.com</p>
+                  <p>contact@mavioglobal.com</p>
                 </div>
                 <div>
                   <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Head Office</p>
                   <p>Hyderabad</p>
-                </div>
-                <div>
-                  <p className="text-[var(--blue-light)] text-xs uppercase tracking-widest mb-1">Export Ports</p>
-                  <p>Vizag · Chennai</p>
                 </div>
               </div>
             </Reveal>
@@ -178,10 +174,10 @@ const Contact = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="border border-[var(--gold)] p-8 md:p-10 space-y-6">
+              <form onSubmit={handleSubmit} className="border border-[var(--gold)] p-8 md:p-10 space-y-6 rounded-2xl shadow-2xl">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
+                    <label htmlFor="name" className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                       Name
                     </label>
                     <input
@@ -195,7 +191,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
+                    <label htmlFor="company" className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                       Company
                     </label>
                     <input
@@ -210,7 +206,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
+                  <label htmlFor="email" className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
                     Email
                   </label>
                   <input
@@ -224,11 +220,26 @@ const Contact = () => {
                   />
                 </div>
 
+                <div>
+                  <label htmlFor="phone" className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block">
+                    Phone
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    value={form.phone}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-[var(--gold)] py-2.5 focus:border-[var(--gold)] outline-none transition-colors"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
   <div>
     <label
       htmlFor="product"
-      className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+      className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
     >
       Product
     </label>
@@ -246,7 +257,7 @@ const Contact = () => {
   <div>
     <label
       htmlFor="grade"
-      className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+      className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
     >
       Grade
     </label>
@@ -264,7 +275,7 @@ const Contact = () => {
 <div>
   <label
     htmlFor="destination"
-    className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+    className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
   >
     Destination
   </label>
@@ -284,7 +295,7 @@ const Contact = () => {
                 <div>
   <label
     htmlFor="comments"
-    className="font-cormorant font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
+    className="font-display font-semibold text-s uppercase tracking-widest text-[var(--charcoal)] mb-2 block"
   >
     Additional Comments
   </label>

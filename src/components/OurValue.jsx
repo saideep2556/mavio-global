@@ -74,7 +74,7 @@ const OurValue = () => {
 
         {/* Card 5 */}
         <Reveal delay={0.1}>
-          <div className="bg-[var(--terminal-grey3)] shadow-md hover:shadow-lg rounded-2x ltransition-shadow overflow-hidden flex flex-col md:flex-row-reverse">
+          <div className="bg-[var(--terminal-grey3)] shadow-md hover:shadow-lg rounded-2xl transition-shadow overflow-hidden flex flex-col md:flex-row-reverse">
             <SafeImage 
               src={logistics} 
               alt="Global Logistics" 

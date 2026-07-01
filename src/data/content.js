@@ -158,9 +158,6 @@ export const certifications = [
   "MPEDA Registered",
   "Spice Board of India",
   "FSSAI Licensed",
-  "ISO 9001:2015",
-  "FSSC 22000",
-  "BRC Global Standard for Food Safety",
   "IEC (Importer Exporter Code) — DGFT",
   "GST & RCMC (Registration,Membership)"
 ];
