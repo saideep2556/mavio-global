@@ -48,7 +48,7 @@ const socialIcons = {
 const ContactCtaStrip = ({ socialLinks, socialImages }) => {
   if (!socialImages?.length) return null;
 
-  const socialOrder = ["youtube", "linkedin", "twitter", "facebook", "instagram"];
+  const socialOrder = ["youtube", "facebook", "instagram", "linkedin", "twitter"];
 
   return (
     <section className="w-full">

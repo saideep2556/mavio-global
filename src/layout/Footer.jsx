@@ -18,11 +18,9 @@ const Footer = () => {
 
 
 
-          <Link
-                    to="/"
-                    onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
+          <button
+                    
+                    onClick={scrollToTop}
                     className="flex items-center"
                   >
                     <img
@@ -30,7 +28,7 @@ const Footer = () => {
                       alt="Mavio Global"
                       className="h-12 md:h-14 w-auto object-contain"
                     />
-                  </Link>
+                  </button>
           
           <p className="text-sm text-[var(--gold)] max-w-sm leading-relaxed mt-20">
             An international trading house specializing in the import and export of agricultural commodities and value-added derivatives.
