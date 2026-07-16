@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { certifications } from "../data/content";
-import logo from "../assets/Logo_transpararent.png"
+import logo from "../assets/mavio-logo.png";
 
 
 const Footer = () => {

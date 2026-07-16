@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import logo from "../assets/Logo_transpararent.png"
+import logo from "../assets/mavio-logo.png";
 
 const navItems = [
   { label: "About", to: "/about" },
